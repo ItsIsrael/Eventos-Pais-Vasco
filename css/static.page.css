@@ -1,0 +1,114 @@
+
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../Assets/pais-vasco_2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* variables for size */
+
+:root {
+    --card-width: 300px;
+    --card-height: 280px;
+}
+
+header {
+    text-align: center;
+}
+
+
+/* Navegation-Header */
+
+.nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px;
+    margin: 40px;
+    gap: 50px;
+}
+.nav a{
+    color: black;
+}
+
+/* Navegation-Bar */
+
+.navMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.navMenu .navBar {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    list-style: none;
+}
+
+.navMenu .navBar a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    width: 3rem;
+    font-size: large;
+    transition: 5ms ease-in-out;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+/* Cards styles with Flex-box */
+
+.containerCards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* container img */
+
+.cardImg {
+    position: absolute;
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+/* absolute and hidden for all */
+
+.absolute {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* cards */
+
+.img {
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+/* Clase que se añadira dinamicamente en el DOM */
+
+.show {
+    visibility: visible;
+    z-index: 100;
+}
